@@ -27,10 +27,10 @@ The layer ensures clean, standardized, and deduplicated data ready for analytics
 The Gold layer is the final stage that creates ready-to-use analytical tables.
 It combines data from Silver tables like bookings, flights, customers, and airports.
 
-A dynamic dimension builder automatically creates dimension tables (e.g., dim_flights, dim_customers) without hardcoding.
+A dynamic dimension builder automatically creates dimension tables (e.g., dimension flights, dimension customers) without hardcoding.
 Each dimension gets surrogate keys, audit columns (create_date, update_date) and uses SCD Type-1 merges with Delta MERGE to update data consistently.
 
-A Fact_Bookings table is created dynamically by joining all dimension tables.
+A Fact table is created dynamically by joining all dimension tables.
 The fact table shows key metrics like revenue, passenger count, and flight details.
 
 The resulting Fact and Dimension tables in the workspace.gold schema form a well-modeled star schema, optimized for analytics, BI dashboards, and advanced reporting in Power BI or Synapse Analytics.
