@@ -19,7 +19,7 @@ DLT pipelines define transformation stages (stage, trans, and silver tables) for
 Expectations are applied to enforce data quality rules (e.g., booking_id IS NOT NULL).
 The layer ensures clean, standardized, and deduplicated data ready for analytics or fact/dimension modeling.
 
-![image alt](https://github.com/sathvikreddy829/EarthquakeData-Project/blob/545b4941c48bccf211e3bdbc04362047c1ea4e64/Screenshot%202025-03-29%20103116.png)
+![image alt](https://github.com/sathvikreddy829/flights-azure-etl/blob/402989c1cd42fe8283b0d7b26b0321a7ca883051/Screenshot%202025-10-19%20143841.png)
 
 🥇 Gold Layer — Aggregation, Facts & Dimensions (Dynamic Modeling)
 
@@ -31,7 +31,5 @@ The SCD Type-1 merge strategy (using Delta MERGE) ensures that any data updates 
 A Fact_Bookings table is also created dynamically by joining the dimension tables with the booking details.
 
 It aggregates booking-level data such as revenue, passenger counts, and flight information, linking them through surrogate keys.
-
-This entire process is metadata-driven, meaning new tables or columns can be added with minimal manual configuration — the code adapts automatically to schema or data changes.
-
+This entire process is metadata-driven, new tables or columns can be added with minimal manual configuration — the code adapts automatically to schema or data changes.
 The resulting Fact and Dimension tables in the workspace.gold schema form a well-modeled star schema, optimized for analytics, BI dashboards, and advanced reporting in Power BI or Synapse Analytics.
