@@ -6,12 +6,11 @@ The Flights End-to-End Project demonstrates a complete data engineering workflow
 🥉 Bronze Layer — Incremental Ingestion (Raw to Bronze)
 
 The Bronze layer ingests raw source files (bookings, flights, airports, and customers) stored in workspace.raw volumes.
-
 It uses Databricks Autoloader (cloudFiles) for incremental ingestion with schema inference, checkpointing, and schema evolution.
-
 A parameterized notebook allows ingestion of multiple sources dynamically using Lakeflow Jobs and dbutils.widgets.
-
 Each source writes Delta-formatted data into the workspace.bronze volume, ensuring incremental, append-only ingestion.
+
+![image alt](https://github.com/sathvikreddy829/EarthquakeData-Project/blob/545b4941c48bccf211e3bdbc04362047c1ea4e64/Screenshot%202025-03-29%20103116.png)
 
 🥈 Silver Layer — Cleansing and Standardization
 
